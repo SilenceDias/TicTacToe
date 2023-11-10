@@ -1,24 +1,607 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gHX-ba-UIG">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Jujutsu Kaisen.ttf">
+            <string>JujutsuKaisen</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Main Menu-->
+        <scene sceneID="Hd2-Bg-2DH">
+            <objects>
+                <viewController id="Fqt-It-qlm" customClass="StartViewController" customModule="TicTacSukuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fP-ed-9N6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sukunaBack" translatesAutoresizingMaskIntoConstraints="NO" id="hI0-wr-I4N">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8w3-m5-WYH">
+                                <rect key="frame" x="134" y="381" width="126" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start Game">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="JujutsuKaisen"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Game">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="26"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="GVq-Ed-EDA" kind="show" id="EQz-a0-y2j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npY-2f-eu9">
+                                <rect key="frame" x="157" y="462" width="81" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start Game">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="JujutsuKaisen"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Rating">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="26"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="6rX-Ii-a2L" kind="show" id="yla-Wj-vjs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="28p-Qw-2jy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="1k2-pk-27Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z79-DW-n12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.7709923664122" y="9.8591549295774659"/>
+        </scene>
+        <!--Other Game-->
+        <scene sceneID="9Jt-oX-TNE">
+            <objects>
+                <viewController id="wgf-Wz-xvl" customClass="OtherViewController" customModule="TicTacSukuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gGz-aS-WEP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Hu5-aW-zig"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Other Game" image="shift.fill" catalog="system" id="o0J-iC-rUx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vha-ci-wqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-697" y="789"/>
+        </scene>
+        <!--Choice View Controller-->
+        <scene sceneID="cuN-dN-dAu">
+            <objects>
+                <viewController id="GVq-Ed-EDA" customClass="ChoiceViewController" customModule="TicTacSukuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qc9-Z9-NZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sukunaBack" translatesAutoresizingMaskIntoConstraints="NO" id="9Wz-D3-APZ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jnF-UT-H0U">
+                                <rect key="frame" x="119" y="431" width="158" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start Game">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="JujutsuKaisen"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Play VS Friend">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="26"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="h46-jE-IGu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBX-oM-W2h">
+                                <rect key="frame" x="136" y="350" width="124" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start Game">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="JujutsuKaisen"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Play VS AI">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="26"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="PlayWithAi" id="OX8-Rz-tAW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="30Z-0g-kAX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dbc-bu-Q3h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqr-H1-PQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="10"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacSukuna" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sukunaBack" translatesAutoresizingMaskIntoConstraints="NO" id="6pf-bC-AsS">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHc-0U-wdm">
+                                <rect key="frame" x="151.66666666666666" y="197" width="90" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="TLe-jh-sqV"/>
+                                    <constraint firstAttribute="height" constant="30" id="hAF-8i-gpo"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="RESET">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="27" name="JujutsuKaisen"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSt-z5-VoZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQp-M7-snI">
+                                <rect key="frame" x="119" y="673" width="144" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="mql-bW-Vqd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="19"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv5-NI-7rb">
+                                <rect key="frame" x="152" y="251" width="90" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="3IX-wv-5ah"/>
+                                    <constraint firstAttribute="height" constant="30" id="Zks-aN-TnP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <segue destination="6DS-Ek-pr9" kind="showDetail" id="a8K-tN-zf6"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w7k-Jo-Lg0">
+                                <rect key="frame" x="51.666666666666657" y="325" width="290" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Y5-jt-Rh1">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcY-nP-xNE">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="7eW-Ii-uTp"/>
+                                                    <constraint firstAttribute="width" constant="90" id="jYH-MU-BEC"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yc6-NZ-pYe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kn-ae-583">
+                                                <rect key="frame" x="100" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="Wc4-qj-jP5"/>
+                                                    <constraint firstAttribute="width" constant="90" id="jYE-BD-U3K"/>
+                                                </constraints>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zLZ-aM-eeF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxq-xy-qyP">
+                                                <rect key="frame" x="200" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="BJY-2h-ORs"/>
+                                                    <constraint firstAttribute="height" constant="90" id="QKC-1X-tpj"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rMW-wJ-XcY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-0o-DiN">
+                                        <rect key="frame" x="0.0" y="100" width="290" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ1-bZ-7bg">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="cmv-ls-hiO"/>
+                                                    <constraint firstAttribute="height" constant="90" id="xDx-vy-96Q"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rEa-kc-1Qd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rv9-1N-ewd">
+                                                <rect key="frame" x="100" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="53u-qd-4cC"/>
+                                                    <constraint firstAttribute="height" constant="90" id="xT5-bE-nOi"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kaB-9M-cx9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSv-pS-3UG">
+                                                <rect key="frame" x="200" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="ezb-HC-xVC"/>
+                                                    <constraint firstAttribute="width" constant="90" id="p9F-7m-qvK"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oGJ-2I-htG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oq5-Em-7ht">
+                                        <rect key="frame" x="0.0" y="200" width="290" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25p-5g-ogR">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="HHm-91-ILg"/>
+                                                    <constraint firstAttribute="width" constant="90" id="uCv-sS-5SF"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49M-tM-ptB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HH8-A6-0IA">
+                                                <rect key="frame" x="100" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="hYk-8H-hP7"/>
+                                                    <constraint firstAttribute="width" constant="90" id="m7K-TT-hpn"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xq2-cy-o5c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YS-Po-kvt">
+                                                <rect key="frame" x="200" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="YhB-wq-fdE"/>
+                                                    <constraint firstAttribute="width" constant="90" id="ais-bS-ZXH"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=""/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ojx-Vk-oLK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w7k-Jo-Lg0" firstAttribute="centerX" secondItem="SHc-0U-wdm" secondAttribute="centerX" id="2Qf-iM-jIK"/>
+                            <constraint firstItem="BQp-M7-snI" firstAttribute="top" secondItem="w7k-Jo-Lg0" secondAttribute="bottom" constant="58" id="2ab-FP-deV"/>
+                            <constraint firstItem="SHc-0U-wdm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="6kN-oQ-9Y2"/>
+                            <constraint firstItem="6pf-bC-AsS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8C0-IB-f9b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nv5-NI-7rb" secondAttribute="trailing" constant="151" id="937-Py-Z34"/>
+                            <constraint firstItem="6pf-bC-AsS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DQc-EH-EQi"/>
+                            <constraint firstAttribute="bottom" secondItem="6pf-bC-AsS" secondAttribute="bottom" id="FDE-Ev-Uib"/>
+                            <constraint firstItem="BQp-M7-snI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="M7A-3v-joP"/>
+                            <constraint firstItem="w7k-Jo-Lg0" firstAttribute="top" secondItem="SHc-0U-wdm" secondAttribute="bottom" constant="98" id="Moo-lO-9rg"/>
+                            <constraint firstItem="Nv5-NI-7rb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="OYz-6G-pGI"/>
+                            <constraint firstItem="6pf-bC-AsS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PJn-6u-27D"/>
+                            <constraint firstItem="SHc-0U-wdm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZKZ-TH-iRJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BQp-M7-snI" secondAttribute="trailing" constant="130" id="jAs-45-DFN"/>
+                            <constraint firstAttribute="trailing" secondItem="6pf-bC-AsS" secondAttribute="trailing" id="jMz-Q1-ABW"/>
+                            <constraint firstItem="Nv5-NI-7rb" firstAttribute="top" secondItem="SHc-0U-wdm" secondAttribute="bottom" constant="24" id="kOP-wm-Ghu"/>
+                            <constraint firstItem="6pf-bC-AsS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q8V-Oq-vS0"/>
+                            <constraint firstItem="w7k-Jo-Lg0" firstAttribute="top" secondItem="Nv5-NI-7rb" secondAttribute="bottom" constant="44" id="wZG-kh-j92"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fB0-mR-2bJ"/>
+                    <connections>
+                        <outlet property="resetButton" destination="SHc-0U-wdm" id="D4y-9P-Dmm"/>
+                        <outlet property="winningLabel" destination="BQp-M7-snI" id="3Ra-Xb-wcl"/>
+                        <outletCollection property="buttons" destination="LcY-nP-xNE" collectionClass="NSMutableArray" id="azY-po-Mk1"/>
+                        <outletCollection property="buttons" destination="4Kn-ae-583" collectionClass="NSMutableArray" id="vHn-Qn-ms7"/>
+                        <outletCollection property="buttons" destination="dxq-xy-qyP" collectionClass="NSMutableArray" id="ESP-mG-ukR"/>
+                        <outletCollection property="buttons" destination="QJ1-bZ-7bg" collectionClass="NSMutableArray" id="Nl1-U8-RP4"/>
+                        <outletCollection property="buttons" destination="rv9-1N-ewd" collectionClass="NSMutableArray" id="9Ht-td-pef"/>
+                        <outletCollection property="buttons" destination="lSv-pS-3UG" collectionClass="NSMutableArray" id="Jye-Fg-AZz"/>
+                        <outletCollection property="buttons" destination="25p-5g-ogR" collectionClass="NSMutableArray" id="AJD-ek-xNN"/>
+                        <outletCollection property="buttons" destination="HH8-A6-0IA" collectionClass="NSMutableArray" id="wpI-mL-G8X"/>
+                        <outletCollection property="buttons" destination="5YS-Po-kvt" collectionClass="NSMutableArray" id="Vxr-5W-uUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1849.6183206106869" y="9.8591549295774659"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="OY7-iU-Jcr">
+            <objects>
+                <viewController id="6DS-Ek-pr9" customClass="LoginViewController" customModule="TicTacSukuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X0e-rj-waI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sukunaBack" translatesAutoresizingMaskIntoConstraints="NO" id="UWR-fy-iMy">
+                                <rect key="frame" x="0.0" y="-11" width="393" height="853"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbJ-wF-WTz">
+                                <rect key="frame" x="151" y="395" width="92" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <segue destination="6rX-Ii-a2L" kind="show" id="BfF-Ay-i50"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lN5-DQ-vaX">
+                                <rect key="frame" x="98" y="301" width="197" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H6c-9L-5if"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="LoginTextField" destination="lN5-DQ-vaX" id="Mx7-RS-GCL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wY5-SW-Rnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2747.3282442748091" y="9.8591549295774659"/>
+        </scene>
+        <!--Rating View Controller-->
+        <scene sceneID="9Ls-bd-QY5">
+            <objects>
+                <viewController id="6rX-Ii-a2L" customClass="RatingViewController" customModule="TicTacSukuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fvq-Pf-C0v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1xa-tJ-bI4">
+                                <rect key="frame" x="0.0" y="71" width="393" height="771"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerViewCell" rowHeight="84" id="zEg-r7-SLD" customClass="PlayerViewCell" customModule="TicTacSukuna" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zEg-r7-SLD" id="XeO-19-lNC">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-SR-DmV">
+                                                    <rect key="frame" x="328" y="27" width="45" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="6jQ-Ci-4ne"/>
+                                                        <constraint firstAttribute="width" constant="45" id="pDv-ff-zTf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pfpPic" translatesAutoresizingMaskIntoConstraints="NO" id="fWj-vs-w16">
+                                                    <rect key="frame" x="20" y="0.0" width="75" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="S0e-Ou-Nzb"/>
+                                                        <constraint firstAttribute="width" constant="75" id="cgE-EI-Hxf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRs-o7-1G2">
+                                                    <rect key="frame" x="103" y="27" width="93" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="O11-dB-hKn"/>
+                                                        <constraint firstAttribute="width" constant="93" id="nM9-gl-z1U"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                                            <constraints>
+                                                <constraint firstItem="bRs-o7-1G2" firstAttribute="top" secondItem="XeO-19-lNC" secondAttribute="topMargin" constant="16" id="CrX-nd-NwZ"/>
+                                                <constraint firstItem="bRs-o7-1G2" firstAttribute="leading" secondItem="fWj-vs-w16" secondAttribute="trailing" constant="8" symbolic="YES" id="KQu-68-hAE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bRs-o7-1G2" secondAttribute="bottom" constant="25" id="Psf-Nc-TL8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wtr-SR-DmV" secondAttribute="bottom" constant="25" id="YFM-eF-8hG"/>
+                                                <constraint firstItem="fWj-vs-w16" firstAttribute="leading" secondItem="XeO-19-lNC" secondAttribute="leading" constant="20" symbolic="YES" id="l47-G4-6Aw"/>
+                                                <constraint firstItem="wtr-SR-DmV" firstAttribute="top" secondItem="XeO-19-lNC" secondAttribute="topMargin" constant="16" id="m5B-aX-RKQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="fWj-vs-w16" secondAttribute="bottom" constant="9" id="qai-P8-4Ec"/>
+                                                <constraint firstItem="wtr-SR-DmV" firstAttribute="trailing" secondItem="XeO-19-lNC" secondAttribute="trailingMargin" id="sf9-9C-Xnx"/>
+                                                <constraint firstItem="fWj-vs-w16" firstAttribute="top" secondItem="XeO-19-lNC" secondAttribute="top" id="yM5-VM-8qd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="loginLabel" destination="bRs-o7-1G2" id="geA-4F-mKz"/>
+                                            <outlet property="profilePic" destination="fWj-vs-w16" id="jfh-ze-YKD"/>
+                                            <outlet property="scoreLabel" destination="wtr-SR-DmV" id="gPq-A7-DqC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WoX-Oo-6Id"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K8j-mw-GMu"/>
+                    <connections>
+                        <outlet property="RatingTableView" destination="1xa-tJ-bI4" id="rky-eY-UTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Os3-AH-8a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.70992366412213" y="762.67605633802816"/>
+        </scene>
+        <!--TicTacSukuna-->
+        <scene sceneID="ZAG-YS-aXm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qws-rM-RX4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TicTacSukuna" image="multiply.square" catalog="system" id="e3o-ua-95O"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VYw-99-Pgn">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="25"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fqt-It-qlm" kind="relationship" relationship="rootViewController" id="NwQ-4M-65N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RqE-o8-Xw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-696.94656488549617" y="9.8591549295774659"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Emg-iX-Cqn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gHX-ba-UIG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CmC-hh-3k3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="barTintColor" systemColor="systemRedColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="selectionIndicatorTintColor" systemColor="systemRedColor"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qws-rM-RX4" kind="relationship" relationship="viewControllers" id="Iz2-ai-xYi"/>
+                        <segue destination="wgf-Wz-xvl" kind="relationship" relationship="viewControllers" id="HuN-Jy-tzn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJI-18-KBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1512" y="525"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BfF-Ay-i50"/>
+        <segue reference="OX8-Rz-tAW"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="multiply.square" catalog="system" width="128" height="114"/>
+        <image name="pfpPic" width="673" height="673"/>
+        <image name="shift.fill" catalog="system" width="128" height="106"/>
+        <image name="sukunaBack" width="460" height="818"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
