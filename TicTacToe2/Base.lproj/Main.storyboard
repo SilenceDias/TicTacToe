@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -114,8 +115,63 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hrx-mN-tpA">
+                                <rect key="frame" x="0.0" y="120" width="393" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IfW-nF-dVh">
+                                    <size key="itemSize" width="117" height="284"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Theme" id="dDS-0V-5Nf" customClass="ThemeCollectionViewCell" customModule="TicTacSukuna" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-2.6666666666666665" width="117" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SLt-fm-e9v">
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="284"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P82-ex-fhT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="195"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="195" id="oUl-Sh-2h2"/>
+                                                        <constraint firstAttribute="width" constant="117" id="tzO-5p-wTv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O71-j8-hRL">
+                                                    <rect key="frame" x="13" y="230" width="91" height="22.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22.329999999999998" id="6gr-77-iXZ"/>
+                                                        <constraint firstAttribute="width" constant="91" id="mh7-7Z-WJ1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="JujutsuKaisen" family="Jujutsu Kaisen" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="O71-j8-hRL" secondAttribute="trailing" constant="13" id="2V1-kn-FT6"/>
+                                                <constraint firstItem="O71-j8-hRL" firstAttribute="top" secondItem="P82-ex-fhT" secondAttribute="bottom" constant="35" id="3Sa-3l-j3X"/>
+                                                <constraint firstAttribute="trailing" secondItem="P82-ex-fhT" secondAttribute="trailing" id="ABJ-Du-XDX"/>
+                                                <constraint firstItem="O71-j8-hRL" firstAttribute="leading" secondItem="SLt-fm-e9v" secondAttribute="leading" constant="13" id="XDx-Gi-sGM"/>
+                                                <constraint firstAttribute="bottom" secondItem="O71-j8-hRL" secondAttribute="bottom" constant="31.670000000000002" id="Ymx-Cy-ZIt"/>
+                                                <constraint firstItem="P82-ex-fhT" firstAttribute="top" secondItem="SLt-fm-e9v" secondAttribute="top" id="aTR-1Q-Tha"/>
+                                                <constraint firstItem="P82-ex-fhT" firstAttribute="leading" secondItem="SLt-fm-e9v" secondAttribute="leading" id="rJF-kC-qWF"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="117" height="284"/>
+                                        <connections>
+                                            <outlet property="image" destination="P82-ex-fhT" id="KP9-Ld-XJd"/>
+                                            <outlet property="nameTheme" destination="O71-j8-hRL" id="w9r-ZX-xs8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jnF-UT-H0U">
-                                <rect key="frame" x="119" y="431" width="158" height="48"/>
+                                <rect key="frame" x="117" y="577" width="158" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
@@ -140,7 +196,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBX-oM-W2h">
-                                <rect key="frame" x="136" y="350" width="124" height="48"/>
+                                <rect key="frame" x="134" y="497" width="124" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
@@ -169,10 +225,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Dbc-bu-Q3h"/>
+                    <connections>
+                        <outlet property="ThemeCollectionView" destination="Hrx-mN-tpA" id="idt-va-P7N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqr-H1-PQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="10"/>
+            <point key="canvasLocation" x="997.70992366412213" y="9.8591549295774659"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -395,6 +454,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fB0-mR-2bJ"/>
                     <connections>
+                        <outlet property="loginButton" destination="Nv5-NI-7rb" id="Mae-Mi-PeY"/>
                         <outlet property="resetButton" destination="SHc-0U-wdm" id="D4y-9P-Dmm"/>
                         <outlet property="winningLabel" destination="BQp-M7-snI" id="3Ra-Xb-wcl"/>
                         <outletCollection property="buttons" destination="LcY-nP-xNE" collectionClass="NSMutableArray" id="azY-po-Mk1"/>
@@ -432,7 +492,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
-                                    <segue destination="6rX-Ii-a2L" kind="show" id="BfF-Ay-i50"/>
+                                    <segue destination="6rX-Ii-a2L" kind="show" identifier="Rating" id="BfF-Ay-i50"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lN5-DQ-vaX">
@@ -567,6 +627,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gHX-ba-UIG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CmC-hh-3k3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <color key="barTintColor" systemColor="systemRedColor"/>

@@ -23,6 +23,9 @@
 		E8F915DF2AFD1257002DAFFD /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915DE2AFD1257002DAFFD /* RatingViewController.swift */; };
 		E8F915E12AFD150D002DAFFD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915E02AFD150D002DAFFD /* PlayerModel.swift */; };
 		E8F915E32AFD161B002DAFFD /* PlayerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915E22AFD161B002DAFFD /* PlayerViewCell.swift */; };
+		E8F915E52AFF613D002DAFFD /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915E42AFF613D002DAFFD /* Database.swift */; };
+		E8F915E72AFF6C7B002DAFFD /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915E62AFF6C7B002DAFFD /* ThemeCollectionViewCell.swift */; };
+		E8F915E92AFF6E24002DAFFD /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915E82AFF6E24002DAFFD /* ThemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		E8F915DE2AFD1257002DAFFD /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		E8F915E02AFD150D002DAFFD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		E8F915E22AFD161B002DAFFD /* PlayerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewCell.swift; sourceTree = "<group>"; };
+		E8F915E42AFF613D002DAFFD /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		E8F915E62AFF6C7B002DAFFD /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8F915E82AFF6E24002DAFFD /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 				E8F915DC2AFD1242002DAFFD /* LoginViewController.swift */,
 				E8F915DE2AFD1257002DAFFD /* RatingViewController.swift */,
 				E8F915E22AFD161B002DAFFD /* PlayerViewCell.swift */,
+				E8F915E62AFF6C7B002DAFFD /* ThemeCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -120,6 +127,8 @@
 			children = (
 				E8F915CE2AF3C5E6002DAFFD /* XOModel.swift */,
 				E8F915E02AFD150D002DAFFD /* PlayerModel.swift */,
+				E8F915E42AFF613D002DAFFD /* Database.swift */,
+				E8F915E82AFF6E24002DAFFD /* ThemeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +223,9 @@
 				E87099922AE161F9005DA283 /* SceneDelegate.swift in Sources */,
 				E8F915D12AF3C664002DAFFD /* TicTacController.swift in Sources */,
 				E8F915D32AF3D831002DAFFD /* StartViewController.swift in Sources */,
+				E8F915E52AFF613D002DAFFD /* Database.swift in Sources */,
+				E8F915E92AFF6E24002DAFFD /* ThemeModel.swift in Sources */,
+				E8F915E72AFF6C7B002DAFFD /* ThemeCollectionViewCell.swift in Sources */,
 				E8F915D72AF3E27D002DAFFD /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

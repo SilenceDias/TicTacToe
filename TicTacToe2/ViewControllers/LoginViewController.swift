@@ -17,8 +17,19 @@ class LoginViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destination = segue.destination as! RatingViewController
-        destination.arrayPlayers.append(PlayerModel(login: LoginTextField.text, score: 10))
+        if segue.identifier == "Rating"{
+            if LoginTextField.text != ""{
+                if let index = Database.db.firstIndex(where: {$0.login == LoginTextField.text}){
+                    Database.db[index].score! += 10
+                }
+                else{
+                    Database.db.append(PlayerModel(login: LoginTextField.text, score: 10))
+
+                }
+                Database.db.sort(by: {$0.score! > $1.score!})
+                
+            }
+        }
         
     }
     

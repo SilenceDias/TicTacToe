@@ -12,11 +12,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resetButton.isHidden = true
+        loginButton.isHidden = true
 //        for i in buttons.indices {
 //            buttons[i].setTitle(String(i), for: .normal)
 //        }
         // Do any additional setup after loading the view.
     }
+    @IBOutlet var loginButton: UIButton!
     @IBOutlet var drawsLabel: UILabel!
     @IBOutlet var xWinsLabel: UILabel!
     @IBOutlet var oWinsLabel: UILabel!
@@ -41,6 +43,7 @@ class ViewController: UIViewController {
 //        oWinsLabel.text = "SUKUNA WINS: \(game.sukunaWins)"
 //        drawsLabel.text = "DRAWS:  \(game.draws)"
         resetButton.isHidden = true
+        loginButton.isHidden = true
     }
     func updateView() {
         for i in game.XOs.indices {
@@ -55,6 +58,7 @@ class ViewController: UIViewController {
         if let win = game.win(){
             winningLabel.text = "\(win)"
             resetButton.isHidden = false
+            loginButton.isHidden = false
             for i in buttons{
                 i.isEnabled = false
             }
