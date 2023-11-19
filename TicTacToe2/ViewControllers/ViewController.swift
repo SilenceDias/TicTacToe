@@ -13,11 +13,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         resetButton.isHidden = true
         loginButton.isHidden = true
-//        for i in buttons.indices {
-//            buttons[i].setTitle(String(i), for: .normal)
-//        }
-        // Do any additional setup after loading the view.
+        if choiceBackground == 0{
+            backgroundImahe.image = UIImage(named: "sukunaTrueFormBack")
+            for i in buttons{
+                i.backgroundColor = .blue
+            }
+        }
+        else if choiceBackground == 1{
+            backgroundImahe.image =  UIImage(named: "sukunaBack")
+        }
+        else if choiceBackground == 2{
+            backgroundImahe.image = UIImage(named: "manga")
+            for i in buttons{
+                i.backgroundColor = .red
+            }
+        }
     }
+    var choiceBackground = 1
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var drawsLabel: UILabel!
     @IBOutlet var xWinsLabel: UILabel!
@@ -45,6 +57,7 @@ class ViewController: UIViewController {
         resetButton.isHidden = true
         loginButton.isHidden = true
     }
+    @IBOutlet var backgroundImahe: UIImageView!
     func updateView() {
         for i in game.XOs.indices {
             if game.XOs[i].isWritten {

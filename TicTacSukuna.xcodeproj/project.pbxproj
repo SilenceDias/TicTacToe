@@ -14,6 +14,12 @@
 		E87099992AE161FB005DA283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87099982AE161FB005DA283 /* Assets.xcassets */; };
 		E87099A62AE482D3005DA283 /* Jujutsu Kaisen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E87099A52AE482D3005DA283 /* Jujutsu Kaisen.ttf */; };
 		E87099AF2AE48C1A005DA283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87099AC2AE48AC4005DA283 /* LaunchScreen.storyboard */; };
+		E8B5983E2B0A9E0A00BF6FF6 /* FirstPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B5983D2B0A9E0A00BF6FF6 /* FirstPlayerViewController.swift */; };
+		E8B598402B0AA22F00BF6FF6 /* ChoiceShipsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B5983F2B0AA22F00BF6FF6 /* ChoiceShipsController.swift */; };
+		E8B598422B0AA58500BF6FF6 /* ShipButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B598412B0AA58500BF6FF6 /* ShipButtonModel.swift */; };
+		E8B598442B0AABAE00BF6FF6 /* SecondPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B598432B0AABAE00BF6FF6 /* SecondPlayerViewController.swift */; };
+		E8B598462B0AB0D800BF6FF6 /* BattleShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B598452B0AB0D800BF6FF6 /* BattleShipViewController.swift */; };
+		E8B598482B0AB0F500BF6FF6 /* BattleShipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B598472B0AB0F500BF6FF6 /* BattleShipController.swift */; };
 		E8F915CF2AF3C5E6002DAFFD /* XOModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915CE2AF3C5E6002DAFFD /* XOModel.swift */; };
 		E8F915D12AF3C664002DAFFD /* TicTacController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915D02AF3C664002DAFFD /* TicTacController.swift */; };
 		E8F915D32AF3D831002DAFFD /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F915D22AF3D831002DAFFD /* StartViewController.swift */; };
@@ -39,6 +45,12 @@
 		E87099A32AE4800D005DA283 /* Jujutsu-Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jujutsu-Font.ttf"; sourceTree = "<group>"; };
 		E87099A52AE482D3005DA283 /* Jujutsu Kaisen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jujutsu Kaisen.ttf"; sourceTree = "<group>"; };
 		E87099AC2AE48AC4005DA283 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E8B5983D2B0A9E0A00BF6FF6 /* FirstPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlayerViewController.swift; sourceTree = "<group>"; };
+		E8B5983F2B0AA22F00BF6FF6 /* ChoiceShipsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceShipsController.swift; sourceTree = "<group>"; };
+		E8B598412B0AA58500BF6FF6 /* ShipButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipButtonModel.swift; sourceTree = "<group>"; };
+		E8B598432B0AABAE00BF6FF6 /* SecondPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPlayerViewController.swift; sourceTree = "<group>"; };
+		E8B598452B0AB0D800BF6FF6 /* BattleShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleShipViewController.swift; sourceTree = "<group>"; };
+		E8B598472B0AB0F500BF6FF6 /* BattleShipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleShipController.swift; sourceTree = "<group>"; };
 		E8F915CE2AF3C5E6002DAFFD /* XOModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOModel.swift; sourceTree = "<group>"; };
 		E8F915D02AF3C664002DAFFD /* TicTacController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacController.swift; sourceTree = "<group>"; };
 		E8F915D22AF3D831002DAFFD /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +122,9 @@
 				E8F915DE2AFD1257002DAFFD /* RatingViewController.swift */,
 				E8F915E22AFD161B002DAFFD /* PlayerViewCell.swift */,
 				E8F915E62AFF6C7B002DAFFD /* ThemeCollectionViewCell.swift */,
+				E8B5983D2B0A9E0A00BF6FF6 /* FirstPlayerViewController.swift */,
+				E8B598432B0AABAE00BF6FF6 /* SecondPlayerViewController.swift */,
+				E8B598452B0AB0D800BF6FF6 /* BattleShipViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				E8F915D02AF3C664002DAFFD /* TicTacController.swift */,
+				E8B5983F2B0AA22F00BF6FF6 /* ChoiceShipsController.swift */,
+				E8B598472B0AB0F500BF6FF6 /* BattleShipController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -129,6 +146,7 @@
 				E8F915E02AFD150D002DAFFD /* PlayerModel.swift */,
 				E8F915E42AFF613D002DAFFD /* Database.swift */,
 				E8F915E82AFF6E24002DAFFD /* ThemeModel.swift */,
+				E8B598412B0AA58500BF6FF6 /* ShipButtonModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B598402B0AA22F00BF6FF6 /* ChoiceShipsController.swift in Sources */,
+				E8B598482B0AB0F500BF6FF6 /* BattleShipController.swift in Sources */,
 				E8F915DD2AFD1242002DAFFD /* LoginViewController.swift in Sources */,
 				E8F915E12AFD150D002DAFFD /* PlayerModel.swift in Sources */,
 				E8F915DF2AFD1257002DAFFD /* RatingViewController.swift in Sources */,
@@ -220,12 +240,16 @@
 				E8F915D52AF3DD08002DAFFD /* OtherViewController.swift in Sources */,
 				E87099902AE161F9005DA283 /* AppDelegate.swift in Sources */,
 				E8F915E32AFD161B002DAFFD /* PlayerViewCell.swift in Sources */,
+				E8B598422B0AA58500BF6FF6 /* ShipButtonModel.swift in Sources */,
 				E87099922AE161F9005DA283 /* SceneDelegate.swift in Sources */,
 				E8F915D12AF3C664002DAFFD /* TicTacController.swift in Sources */,
 				E8F915D32AF3D831002DAFFD /* StartViewController.swift in Sources */,
 				E8F915E52AFF613D002DAFFD /* Database.swift in Sources */,
+				E8B598442B0AABAE00BF6FF6 /* SecondPlayerViewController.swift in Sources */,
 				E8F915E92AFF6E24002DAFFD /* ThemeModel.swift in Sources */,
+				E8B598462B0AB0D800BF6FF6 /* BattleShipViewController.swift in Sources */,
 				E8F915E72AFF6C7B002DAFFD /* ThemeCollectionViewCell.swift in Sources */,
+				E8B5983E2B0A9E0A00BF6FF6 /* FirstPlayerViewController.swift in Sources */,
 				E8F915D72AF3E27D002DAFFD /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

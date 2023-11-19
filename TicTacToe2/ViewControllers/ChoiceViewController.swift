@@ -15,13 +15,17 @@ class ChoiceViewController: UIViewController {
         ThemeCollectionView.delegate = self
 
     }
+    var choice = 1
     @IBOutlet var ThemeCollectionView: UICollectionView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! ViewController
         if segue.identifier == "PlayWithAi" {
-            let destination = segue.destination as! ViewController
+            
             destination.game.playWithAi = true
+          
         }
+        destination.choiceBackground = choice
     }
 
 }
@@ -36,6 +40,14 @@ extension ChoiceViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.nameTheme.text = Database.theme[indexPath.row].name
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = ThemeCollectionView.cellForItem(at: indexPath) as? ThemeCollectionViewCell
+        cell?.contentView.backgroundColor = .red
+        choice = indexPath.row
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = ThemeCollectionView.cellForItem(at: indexPath) as? ThemeCollectionViewCell
+        cell?.contentView.backgroundColor = .clear
+    }
     
 }
